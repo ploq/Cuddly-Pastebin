@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+
+  "name": "Pastebin Crypt",
+  "description": "Encrypts Pastebin paste",
+  "version": "0.0.1",
+
+  "content_scripts": [{
+    "matches": [
+      "http://pastebin.com/",
+      "http://www.pastebin.com/"
+    ],
+
+    "js": ["sjcl.js", "jquery-2.2.0.min.js", "encryptPB.js"]
+  },
+    {
+    "matches": [
+      "http://pastebin.com/*",
+      "http://www.pastebin.com/*"
+    ],
+      "exclude_matches": [
+        "http://pastebin.com/",
+        "http://pastebin.com/trends/*",
+        "http://pastebin.com/api/*",
+        "http://pastebin.com/tools/*",
+        "http://pastebin.com/faq/*",
+        "http://pastebin.com/raw/*",
+        "http://pastebin.com/download/*",
+        "http://pastebin.com/index/*",
+        "http://pastebin.com/embed/*",
+        "http://pastebin.com/report/*",
+        "http://pastebin.com/print/*"
+      ],
+
+    "js": ["sjcl.js", "jquery-2.2.0.min.js", "decryptPB.js"]
+  }],
+
+
+  "permissions": [
+    "tabs",
+    "http://pastebin.com/*",
+    "http://www.pastebin.com/*"
+  ]
+}
