@@ -1,5 +1,5 @@
 # Cuddly-Pastebin
-Encrypts/decrypts pastes from Pastebin.com
+A Chrome plugin which encrypts/decrypts pastes from Pastebin.com
 
 # Requirements
 Jquery - https://jquery.com/download/  
