@@ -1,6 +1,6 @@
 # Cuddly-Pastebin
-Encrypts/decrypts pastes
+Encrypts/decrypts pastes from Pastebin.com
 
 # Requirements
-Jquery - https://jquery.com/download/
+Jquery - https://jquery.com/download/  
 SJCL   - http://bitwiseshiftleft.github.io/sjcl/sjcl.js
