@@ -11,7 +11,6 @@
       "http://www.pastebin.com/"
     ],
 
-<<<<<<< HEAD
     "js": ["alertify.js", "sjcl.js", "jquery.min.js", "storagePB.js", "encryptPB.js"],
     "css": ["alertify.css"]
   },
@@ -20,25 +19,12 @@
       "http://pastebin.com/*",
       "http://www.pastebin.com/*"
       ],
-=======
-    "js": ["sjcl.js", "jquery-2.2.0.min.js", "encryptPB.js"]
-  },
-    {
-    "matches": [
-      "http://pastebin.com/*",
-      "http://www.pastebin.com/*"
-    ],
->>>>>>> 830bcc6eb078615f64c4ad5fd171ee633c79d67f
       "exclude_matches": [
         "http://pastebin.com/",
         "http://pastebin.com/trends/*",
         "http://pastebin.com/api/*",
         "http://pastebin.com/tools/*",
         "http://pastebin.com/faq/*",
-<<<<<<< HEAD
-=======
-        "http://pastebin.com/raw/*",
->>>>>>> 830bcc6eb078615f64c4ad5fd171ee633c79d67f
         "http://pastebin.com/download/*",
         "http://pastebin.com/index/*",
         "http://pastebin.com/embed/*",
@@ -46,22 +32,12 @@
         "http://pastebin.com/print/*"
       ],
 
-<<<<<<< HEAD
       "js": ["highlight.min.js", "alertify.js", "sjcl.js", "jquery.min.js", "storagePB.js", "decryptPB.js"],
       "css": ["alertify.css", "default.min.css"]
-=======
-    "js": ["sjcl.js", "jquery-2.2.0.min.js", "decryptPB.js"]
->>>>>>> 830bcc6eb078615f64c4ad5fd171ee633c79d67f
   }],
 
 
   "permissions": [
-<<<<<<< HEAD
     "storage"
-=======
-    "tabs",
-    "http://pastebin.com/*",
-    "http://www.pastebin.com/*"
->>>>>>> 830bcc6eb078615f64c4ad5fd171ee633c79d67f
   ]
 }
