@@ -3,7 +3,6 @@ var paste_enc_pref = "//+paste-encr";
 var new_line_start = "<li class='li1'><div class='de1'>";
 var new_line_end = "</div></li>";
 
-
 function htmlEscape(str) {
     return String(str)
         .replace(/&/g, '&amp;')
