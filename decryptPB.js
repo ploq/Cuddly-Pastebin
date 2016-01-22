@@ -86,10 +86,23 @@ function decryptRaw(paste_text, paste_id) {
     }
 }
 
+function decryptClone(paste_text, paste_id) {
+    if (paste_text.slice(0, paste_enc_pref.length) == paste_enc_pref) {
+        var html_selector = $("#paste_code");
+        html_selector.val("Encrypted!");
+
+        decryptPaste(paste_text, paste_id, function(dec_data) {
+           html_selector.val(dec_data);
+        });
+    }
+}
+
 var paste_id = window.location.pathname.split("/");
 
 if(window.location.pathname.slice(0,5) === "/raw/") {
     decryptRaw($("body pre").text(), paste_id[2]);
+} else if (window.location.pathname.slice(0,"/index/".length) === "/index/") {
+    decryptClone($("#paste_code").val(), paste_id[2]);
 } else {
     var paste_text = $("#selectable").text().slice(4).trim();
     decryptIndex(paste_text, paste_id[1]);
