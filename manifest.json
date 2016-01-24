@@ -11,7 +11,7 @@
       "http://www.pastebin.com/"
     ],
 
-    "js": ["alertify.js", "sjcl.js", "jquery.min.js", "storagePB.js", "encryptPB.js"],
+    "js": ["alertify.js", "sjcl.js", "jquery.min.js", "encryptPB.js"],
     "css": ["alertify.css"]
   },
     {
@@ -31,7 +31,7 @@
         "http://pastebin.com/print/*"
       ],
 
-      "js": ["highlight.min.js", "alertify.js", "sjcl.js", "jquery.min.js", "storagePB.js", "decryptPB.js"],
+      "js": ["highlight.min.js", "alertify.js", "sjcl.js", "jquery.min.js", "decryptPB.js"],
       "css": ["alertify.css", "default.min.css"]
   }],
 
