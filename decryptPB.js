@@ -4,11 +4,22 @@ var new_line_start = "<li class='li1'><div class='de1'>";
 var new_line_end = "</div></li>";
 var text_patt = new RegExp("/archive/text");
 
+
+function htmlEscape(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+}
+
+
 function createPasteText(text, html) {
     if (text_patt.exec(html) == null) {
         return new_line_start + hljs.highlightAuto(text).value + new_line_end;
     } else {
-        return new_line_start + text + new_line_end;
+        return new_line_start + htmlEscape(text) + new_line_end;
     }
 
 }
