@@ -13,7 +13,7 @@ function getPassword() {
     return $("#paste_passw").val();
 }
 
-var injected_input = '<input type="text" id="paste_passw" name="paste_passw" size="20" maxlength="60" value="" class="post_input">';
+var injected_input = '<input type="password" id="paste_passw" name="paste_passw" size="20" maxlength="60" value="" class="post_input">';
 
 var injected_div = `<div class="form_left">
 Password:
