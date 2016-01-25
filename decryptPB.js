@@ -82,21 +82,7 @@ function decryptRaw(paste_text) {
         $("#paste_pass").keyup(function(e) {
             if (e.keyCode == 13) {
                 decryptPaste(paste_text, function (dec_data) {
-                    html_selector.html(dec_data);
-                });
-            }
-        });
-    }
-}
-
-function decryptClone(paste_text) {
-    if (paste_text.slice(0, paste_enc_pref.length) == paste_enc_pref) {
-        var html_selector = $("#paste_code");
-        html_selector.val(password_input);
-        $("#paste_pass").keyup(function(e) {
-            if (e.keyCode == 13) {
-                decryptPaste(paste_text, function (dec_data) {
-                    html_selector.val(dec_data);
+                    html_selector.html(htmlEscape(dec_data));
                 });
             }
         });
@@ -106,8 +92,6 @@ function decryptClone(paste_text) {
 
 if(window.location.pathname.slice(0,5) === "/raw/") {
     decryptRaw($("body pre").text());
-} else if (window.location.pathname.slice(0,"/index/".length) === "/index/") {
-    decryptClone($("#paste_code").val());
 } else {
     var paste_text = $("#selectable").text().slice(4).trim();
     decryptIndex(paste_text);
